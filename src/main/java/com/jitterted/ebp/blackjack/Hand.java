@@ -17,7 +17,7 @@ public class Hand {
     return cards.get(index);
   }
 
-  int handValueOf() {
+  int value() {
     int handValue = cards
         .stream()
         .mapToInt(Card::rankValue)
@@ -41,5 +41,9 @@ public class Hand {
                             .map(Card::display)
                             .collect(Collectors.joining(
                                 ansi().cursorUp(6).cursorRight(1).toString())));
+  }
+
+  boolean isBusted() {
+    return value() > 21;
   }
 }

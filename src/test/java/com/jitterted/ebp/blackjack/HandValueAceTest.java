@@ -14,7 +14,7 @@ public class HandValueAceTest {
     hand.add(new Card(DUMMY_SUIT, "A"));
     hand.add(new Card(DUMMY_SUIT, "5"));
 
-    assertThat(hand.handValueOf())
+    assertThat(hand.value())
         .isEqualTo(11 + 5);
   }
 
@@ -25,7 +25,7 @@ public class HandValueAceTest {
     hand.add(new Card(DUMMY_SUIT, "8"));
     hand.add(new Card(DUMMY_SUIT, "3"));
 
-    assertThat(hand.handValueOf())
+    assertThat(hand.value())
         .isEqualTo(1 + 8 + 3);
   }
 
